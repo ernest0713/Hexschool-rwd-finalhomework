@@ -16,6 +16,7 @@ img{
 	background-color: #EFE9E7;
 }
 
+
 /* Style the top navigation bar */
 .navbar {  
   background-color: rgba(0,0,0,0.75);
@@ -24,7 +25,7 @@ img{
   align-items: center;
   position: fixed;
   width: 1024px;
-  padding: 0px 48px;
+  padding: 0px 42px;
 }
 
 /* Style the navigation bar links */
@@ -81,8 +82,9 @@ img{
 /*header end*/
 
 /*Content start*/
+/*start for index*/
 .about {
-	padding: 2em 2em;
+	padding: 50px 62px;
 }
 .about p{
 	color: #3D1101;
@@ -115,6 +117,7 @@ img{
 	width: 32%;
 	margin: 1% 2%;
 }
+
 .about ul ol{
 	display: flex;
 	flex-direction: column;
@@ -138,7 +141,7 @@ img{
 .banner{
 	display: flex;
 	background-color: #3D1101;
-	padding: 0px 5%;
+	padding: 0px 42px;
 }
 
 .banner ul{
@@ -150,43 +153,224 @@ img{
 }
 .banner ul li:first-child{
 	font-size: 20px;
+
 }
-.banner ul p{
+.banner ul li p{
 	margin-top: 1rem;
 }
 
+.comment{
+	display: flex;
+	flex-direction: column;
+	padding: 50px 42px;
+	color: #3D1101;
+}
 
+.comment p{
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 2rem;
+}
 
+.comment div{
+	display: flex;
+}
+.comment ul{
+	display: flex;
+	flex-direction: column;
+	margin-left: 20px;
+}
+.comment ul:first-child{
+	margin-left: 0px;
+}
+
+.comment ul img{
+	border: 1px solid #EFE9E7;
+	border-radius: 67px;
+	margin-right: 13px;
+}
+.comment ul li{
+	padding-left: 80px;	
+}
+.comment ul li:first-child{
+	display: flex;
+	align-items: center;
+	padding-left: 0px;
+}
+
+.comment .name{
+	margin-top:1rem;
+	text-align: right;
+}
+
+.booking{
+	display: flex;
+	flex-direction: column;
+	padding: 50px 42px;
+	color: #3D1101;
+	background-color: #FAFAFA;
+}
+.booking p.title{
+	font-size: 24px;
+	line-height: 30px;
+	text-align: center;
+	margin-bottom: 38px;
+}
+
+.booking div.content{
+	display: flex;
+}
+
+.booking div img{
+	margin-right: 20px;
+	width: 50%;
+}
+
+.booking form{
+	display: flex;
+	flex-direction: column;
+	/*justify-content: space-between;*/
+	width: 50%;
+}
+
+.booking form label{
+	font-size: 14px;
+}
+
+.booking form input[type=tel],
+.booking form input[type=email],
+.booking form input[type=text]{
+	width: 100%;
+	font-size: 16px;
+	margin: 6px 0px 12px 0px;
+	padding: 5px 14px 5px 0px;
+	background: #FFFFFF;
+	border: 1px solid #CCCCCC;
+	box-shadow: inset 0px 1px 0px 0px #ECECEC;
+	border-radius: 3px;
+}
+
+.booking form div{
+	display: flex;
+	flex-wrap:wrap;
+}
+
+.booking form div p {
+	width: 100%;
+	font-size: 14px;
+	text-align: left;
+	margin-bottom: 6px;	
+}
+
+.booking input[type=radio]{
+	margin-right: 2rem;	
+}
+
+.booking form div.button{
+	display: flex;
+	justify-content: flex-end;
+	align-items: flex-end;
+	height: 100%;
+}
+.booking input[type=reset]{
+	background: rgba(0,0,0,0.35);
+	border-radius: 3px;
+	border: 1px solid rgba(0,0,0,0.35);
+	margin-right: 11px;
+	height: 32px;
+	width: 70px;
+}
+.booking input[type=submit]{
+	background: #F56C23;
+	border-radius: 3px;
+	border: 1px solid #F56C23;
+	height: 32px;
+	width: 70px;
+}
+/*End for index*/
+
+/*Start for menu*/
+.foodMenu{
+	display: flex;
+	padding: 50px 42px;
+	flex: 0 1 auto;
+}
+
+.sidebar{
+	margin-right: 20px;
+}
+.sidebar i{
+	margin-right: 15px;
+	margin-bottom: 1rem;
+}
+
+.sidebar ul{
+	font-size: 16px;
+	color: #3D1101;
+	line-height: 32px;
+}
+.sidebar ul li{
+	border-bottom: 1px solid #3D1101;
+}
+.sidebar a{
+	display: block;
+	color: #3D1101;
+	text-decoration: none;
+}
+
+.sidebar a:hover, .sidebar a:active{
+	background-color: #3D1101;
+	color: #FFFFFF;
+}
+.sidebar li.title{
+	font-size: 20px;
+	border:none;
+}
+
+.sidebar li.active a{
+	background-color: #3D1101;
+	color: #FFFFFF;
+}
+
+.items div.topbar{
+	display: flex;
+	justify-content: space-between;
+	width: 100%;
+}
+.items div.topbar ul{
+	display: flex;
+}
+
+/*End for menu*/
 /*content end*/
 
 /* footer started*/
 .footer{
 	display: flex;
-	justify-content: center;
-    align-items: center;
+	justify-content: space-between;
+    padding: 50px 42px;
 }
 
 .footer div{
-	width: 28%;
-	margin: 1% 2%;
+	width: 30%;
 	color: #3D1101;
 }
 .footer div h2{
 	font-size: 49px;
-	margin-top:50px;
-	margin-bottom: 16px;
+	margin-bottom: 1rem;
 }
 .footer div h3{
 	font-size: 24px;
-	margin-top:50px;
-	margin-bottom: 16px;
+	margin-bottom: 1rem;
 }
 
 .footer div ol{
 	list-style-type: disc;
 }
 
-.footer .fbicon, .twicon , .ggicon{
+.footer .fbicon, 
+		.twicon,
+		.ggicon{
 	width: 32px;
 	height: 32px;
 	margin: 0px 8px;
