@@ -11,8 +11,8 @@ img{
 
 /*header set start*/
 .wrap{
-	max-width:1024px;
-	margin:auto;
+	max-width: 1024px;
+	margin:0 auto;
 	background-color: #EFE9E7;
 }
 
@@ -24,8 +24,12 @@ img{
   justify-content: space-between;
   align-items: center;
   position: fixed;
-  width: 1024px;
-  padding: 0px 42px;
+  left: 0px;
+  right: 0px;
+  top: 0px;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 42px;
 }
 
 /* Style the navigation bar links */
@@ -501,6 +505,41 @@ input.singin{
 }
 
 /*login end*/
+
+/*register start*/
+.main-register{
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.main-register h2, .main-register h5{
+	color: #3D1101;
+}
+
+.main-register h2{
+	font-size: 3rem;
+	margin-bottom: 5px;
+}
+.main-register h5{
+	font-size: 20px;
+	margin-bottom: 35px;
+}
+.main-register form{
+
+}
+
+
+/*register end*/
+
+
+
+
+
+
+
 
 /*content end*/
 
