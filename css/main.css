@@ -30,6 +30,7 @@ img{
   max-width: 1024px;
   margin: 0 auto;
   padding: 0 42px;
+  z-index: 1000;
 }
 
 /* Style the navigation bar links */
@@ -302,7 +303,7 @@ img{
 
 .sidebar{
 	margin-right: 20px;
-	width: 25%;
+	width: 220px;
 }
 .sidebar i{
 	margin-right: 15px;
@@ -317,6 +318,13 @@ img{
 .sidebar ul li{
 	border-bottom: 1px solid #3D1101;
 }
+
+.sidebar li.title{
+	font-size: 20px;
+	margin-bottom: 16px;
+	border: none;
+}
+
 .sidebar a{
 	display: block;
 	color: #3D1101;
@@ -327,17 +335,15 @@ img{
 	background-color: #3D1101;
 	color: #FFFFFF;
 }
-.sidebar li.title{
-	font-size: 20px;
-	border:none;
-}
+
 
 .sidebar li.active a{
 	background-color: #3D1101;
 	color: #FFFFFF;
+
 }
 .items{
-	width: 75%;
+	width: 100%;
 }
 .items div.topbar{
 	display: flex;
@@ -346,6 +352,7 @@ img{
 }
 .items div.topbar ul{
 	display: flex;
+	align-items: center;
 }
 
 .items div.topbar ul li:first-child{
@@ -354,21 +361,33 @@ img{
 
 .items div.topbar ul li{
 	padding: 0px 12px;
+
 }
-.items div.topbar i{
-	font-size: 20px;
+.items div.topbar ul li a{
+	text-decoration: none;
+	color: #3D1101;
+}
+.items div.topbar ul li a:hover{
+	text-decoration: underline;
+}
+.items div.topbar ul li i{
+	font-size: 27px;
+	color: #3D1101;
+	position: relative;
 }
 
 
 .items div.topbar form{
 	border: 2px solid #3D1101;
 	display: flex;
+	width: 460px;
+  	height: 32px;	
 }
 .items div.topbar input[type=text] {
-  padding: 6px;
-  font-size: 16px;
-  border: none;
-  width: 460px;	
+	padding: 6px;
+	font-size: 16px;
+	border: none;
+	width: 100%;
 }
 
 .items div.topbar button {
@@ -377,22 +396,136 @@ img{
   font-size: 16px;
   border: none;
   cursor: pointer;
+  color: white;
 }
 
 .items div.topbar button:hover {
-  background: #ccc;
+  background: gray;
+  color: #3D1101;
 }
 
-.items div.items-food ul{
+.items div.topbar ul li span{
+	position: absolute;
+	top: -5px;
+	right: -5px;
+	background: #FF5E45;
+	border: 1px solid #EFE9E7;
+	border-radius: 100%;
+	font-size: 12px;
+	color: #FFFFFF;
+}
+.items div.items-food {
 	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
-.items div.items-food ul li{
-	width: 33%;
-	background: #EFE9E7;
+.items .food-card{
+	position: relative;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    min-width: 0;
+    word-wrap: break-word;
+    background-color: #EFE9E7;
 	box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+	width: 220px;
+	height: 280px;
+	margin-top: 26px;		
+	justify-content: space-between;
+	overflow: hidden;
 }
 
+.food-card-img{
+	width: 220px;
+	height: 120px;
+}
+.food-card-img .tag{
+	background-color: #00cc99;
+    color: white;
+    font-size: 14px;
+    width: 220px;
+    text-align: center;
+    padding: 3px 0;
+    position: absolute;
+    -webkit-transform: translate(85px, -15px) rotate(45deg);
+    -ms-transform: translate(85px, -15px) rotate(45deg);
+    transform: translate(85px, -15px) rotate(45deg);
+}
+.food-card-img i{
+	font-size: 23px;
+    color: white;
+    margin-left: 9px;
+    margin-top: 9px;
+}
+.product-1{
+	background: url("/material/web/assets/product_1.png") no-repeat;
+	background-size: 100% 100%;
+}
+.product-2{
+	background: url("/material/web/assets/product_2.png") no-repeat;
+	background-size: 100% 100%;
+}
+.product-3{
+	background: url("/material/web/assets/product_3.png") no-repeat;
+	background-size: 100% 100%;
+}
+.product-4{
+	background: url("/material/web/assets/product_4.png") no-repeat;
+	background-size: 100% 100%;
+}
+
+.food-card-body{
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	text-align: center;
+	padding: 10px;
+	height: 160px;
+}
+.food-card-body h4{
+	font-size: 20px;
+	color: #3D1101;
+}
+.food-card-body p.value{
+	font-size: 20px;
+	font-style: italic;
+	color: #3D1101;
+}
+
+.food-card-body .center-line{
+	width: 41%;
+	height: 3px;
+	border: 1px solid #3D1101;
+	background-color: #3D1101;
+}
+.food-card-body p.intro{
+	font-size: 12px;
+	color: #3D1101;
+}
+
+.food-card-body a{
+	border: 2px solid #FF5E45;
+	border-radius: 3px;
+	display: inline-block;
+	height: 28px;
+	vertical-align: middle;
+	width: 100%;
+	padding: 3px;
+	text-decoration: none;
+	color: #FF5E45;
+}
+.food-card-body hr{
+	margin-bottom: 20px;
+}
+.food-card-body a i{
+	margin: 0 9px;
+}
+.food-card-body a:hover{
+	background-color: #FF5E45;
+	color: white; 
+}
 
 
 /*End for menu*/
@@ -435,13 +568,13 @@ img{
 	font-style: bold;
 	text-align: center;
 }
-.login-form-label{
+.login-form-label, .register-form-label{
 	margin-bottom: 3px;
 	color: #3D1101;
 	max-width: 100%;
 	text-align: left;
 }
-.mt-15{
+.mb-15{
 	margin-bottom: 15px;
 }
 
@@ -467,15 +600,13 @@ img{
 	padding: 10px 10px;
 }
 
-a.forgot-password{
+a.forgot-password, a.has-account{
 	color: #FF5E45;
 	font-size: 14px;
-	margin-bottom: 30px;
-	margin-top: 1px;
 	text-decoration: none;
 }
 
-a.forgot-password:hover, a.forgot-password:active{
+a.forgot-password:hover, a.forgot-password:active, a.has-account:hover{
 	text-decoration: underline;
 }
 
@@ -486,7 +617,7 @@ a.forgot-password:hover, a.forgot-password:active{
 	align-items: flex-end;
 }
 
-.login-form-button input{
+.login-form-button input, .register-form-button input{
 	width: 125px;
 	height: 2rem;
 	border: 0;
@@ -494,16 +625,19 @@ a.forgot-password:hover, a.forgot-password:active{
 	color: white;
 }
 
-input.singup{
+.singup{
 	background: rgba(0,0,0,0.35);
 	border-radius: 3px;
+	cursor: pointer;
 }
-
-input.singin{
+.singin, .register-signup{
 	background: #F56C23;
 	border-radius: 3px;
+	cursor: pointer;
 }
-
+.singup:hover, .singin:hover, .register-signup:hover{
+	border: 2px solid black;
+}
 /*login end*/
 
 /*register start*/
@@ -528,9 +662,34 @@ input.singin{
 	margin-bottom: 35px;
 }
 .main-register form{
-
+	width: 620px;
+	height: 316px;
+	border-top: 3px solid #FF5E45;
+	box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
+	display: flex;
+	justify-content: center;
+	align-content: flex-start;
+	flex-wrap: wrap;
+	padding: 15px 15px;
 }
-
+.main-register form h4{
+	font-family: NotoSansCJKtc-Black;
+	font-size: 18px;
+	color: #3D1101;
+	text-align: center;
+	margin-bottom: 1rem;
+	width: 100%;
+}
+.register-form-left, .register-form-right{
+	width: 50%;
+}
+.container-has-account{
+	margin-top: 1px;
+	margin-bottom: 30px;
+}
+.register-form-button{
+	text-align: right;
+}
 
 /*register end*/
 
