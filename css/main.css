@@ -58,7 +58,7 @@ img{
   color: black;
 }
 
-.navbar .showMenu{
+.navbar a.showMenu{
 	display: none;
 	position: relative;
 	color: white;
