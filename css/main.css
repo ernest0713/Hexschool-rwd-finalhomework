@@ -443,7 +443,6 @@ img{
     display: flex;
     -ms-flex-direction: column;
     flex-direction: column;
-    min-width: 0;
     word-wrap: break-word;
     background-color: #EFE9E7;
 	box-shadow: 3px 3px 4px 0px rgba(0,0,0,0.16);
@@ -857,6 +856,30 @@ a.forgot-password:hover, a.forgot-password:active, a.has-account:hover{
 
 	.navbar a.showMenu{
 		display: block;
+	}
+
+	.foodMenu{
+		flex-wrap: wrap;
+	}
+	.sidebar{
+		margin: 0;
+		width: 100%;
+	}
+	.items div.topbar{
+		justify-content: flex-end;
+		flex-wrap: wrap;
+		margin-top: 20px;
+	}
+	.items div.topbar ul{
+		margin-top: 20px;
+	}
+	.items .food-card, .food-card-img{
+		width: 100%;
+	}
+	.food-card-img .tag{
+		transform: rotate(45deg);
+	    right: -85px;
+	    top: 20px;
 	}
 }
 
